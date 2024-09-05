@@ -1,0 +1,24 @@
+{
+    "tools": [
+      {
+        "toolSpec": {
+          "name": "get_weather",
+          "description": "Get the current weather in a given location",
+          "inputSchema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "description": "The city and state, e.g. San Francisco, CA."
+                }
+              },
+              "required": [
+                "sign"
+              ]
+            }
+          }
+        }
+      }
+    ]
+}
