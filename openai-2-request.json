@@ -1,0 +1,80 @@
+{
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant\n        - You should only use the functions you have been provided with to answer enquiries.\n        - If you're unsure of an answer, you can say 'Sorry, I don't have the information right now'.\n        - Do not use your own knowledge to answer questions, you have to using the provided functions. \n        - Do not execute the functions in parallel with other functions."
+      },
+      {
+        "role": "user",
+        "content": "Can you base on my last month income and expenses and analyse my financial situation?"
+      },
+      {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_Nk86vkUKPP3IcTt7RxTTKZOq",
+            "function": {
+              "arguments": "{\"type\":\"income\"}",
+              "name": "getMyFinacialData"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "tool_call_id": "call_Nk86vkUKPP3IcTt7RxTTKZOq",
+        "role": "tool",
+        "name": "getMyFinacialData",
+        "content": "{\"income\": 18}"
+      }
+    ],
+    "model": "gpt-3.5-turbo",
+    "temperature": 0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "getMyFinacialData",
+          "description": "Get the financial data of the user",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of the data, either income or expenses"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "analyseFinacialStatus",
+          "description": "Analyse the financial status based on the income and expenses",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "income": {
+                "type": "integer",
+                "description": "The output of the getLastMonthIncome function"
+              },
+              "expenses": {
+                "type": "integer",
+                "description": "The output of the getLastMonthExpenses function"
+              }
+            },
+            "required": [
+              "income",
+              "expenses"
+            ]
+          }
+        }
+      }
+    ]
+  }
