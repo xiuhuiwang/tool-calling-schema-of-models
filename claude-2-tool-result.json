@@ -1,0 +1,20 @@
+{
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "tool_use_id": "toolu_01A09q90qw90lq917835lq9",
+        "content": [
+          {"type": "text", "text": "15 degrees"},
+          {
+            "type": "image",
+            "source": {
+              "type": "base64",
+              "media_type": "image/jpeg",
+              "data": "/9j/4AAQSkZJRg..."
+            }
+          }
+        ]
+      }
+    ]
+  }
