@@ -1,0 +1,13 @@
+{
+    "output": {
+       "message": {
+           "role": "assistant",
+           "content": [
+               {
+                   "text": "The most popular song on WZPZ is Elemental Hotel by 8 Storey Hike."
+               }
+           ]
+       }
+   },
+   "stopReason": "end_turn"
+}

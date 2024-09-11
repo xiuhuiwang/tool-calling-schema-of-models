@@ -1,0 +1,19 @@
+{
+    "output": {
+        "message": {
+            "role": "assistant",
+            "content": [
+                {
+                    "toolUse": {
+                        "toolUseId": "tooluse_hbTgdi0CSLq_hM4P8csZJA",
+                        "name": "top_song",
+                        "input": {
+                            "sign": "WZPZ"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "stopReason": "tool_use"
+}
